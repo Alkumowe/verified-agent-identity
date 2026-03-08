@@ -1,0 +1,47 @@
+name: Verify Human Identity
+
+on:
+  workflow_dispatch:
+    inputs:
+      agent_name:
+        description: "Kumowee"
+        required: true
+        default: "Kumowee"
+      agent_description:
+        description: "Kumowee"
+        required: true
+        default: "Kumowee"
+
+jobs:
+  verify:
+    name: Billions Agent Verification
+    runs-on: ubuntu-latest
+    
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          
+          
+      - name: Install ClawHub verified-agent skill
+  clawhub@latest install verified-agent-identity
+
+      - name: Install scripts dependencies
+        
+        run: I
+           cd scripts
+           npm install
+
+      - name: Create Ethereum Identity
+        run: node scripts/createNewEthereumIdentity.js
+    - name: step 3 - Link Human to Agent
+   run: I
+     
+        node scripts/manualLinkHumantoAgent . js - - challenge '{ "name" : Kumowee", "description " :  "kumowee"}'
+
+      
